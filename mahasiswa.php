@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,7 @@
                     <th>Nama</th>
                     <th>NIM</th>
                     <th>Prodi</th>
+                    <th>Aksi</th> <!-- Kolom baru untuk Aksi -->
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +38,11 @@
                     echo "<td>" . $mahasiswa[0] . "</td>";
                     echo "<td>" . $mahasiswa[1] . "</td>";
                     echo "<td>" . $mahasiswa[2] . "</td>";
+                    // Tombol untuk Edit dan Hapus
+                    echo "<td>
+                            <a href='edit_mahasiswa.php?id=" . $no . "' class='btn btn-primary btn-sm'>Edit</a>
+                            <a href='hapus_mahasiswa.php?id=" . $no . "' class='btn btn-danger btn-sm ml-1'>Hapus</a>
+                          </td>";
                     echo "</tr>";
                     $no++;
                 }
